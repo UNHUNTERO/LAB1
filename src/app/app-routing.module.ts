@@ -9,7 +9,11 @@ const routes: Routes = [
   {
     path: 'graph',
     loadChildren: () => import('./graph/graph.module').then( m => m.GraphPageModule)
+  },  {
+    path: 'lab3',
+    loadChildren: () => import('./lab3/lab3.module').then( m => m.Lab3PageModule)
   }
+
 ];
 @NgModule({
   imports: [

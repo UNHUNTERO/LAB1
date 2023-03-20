@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-menu-button color="dark menu=first"></ion-menu-button>
+  </ion-buttons>
+  <ion-title>лабораторні роботи</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Лабораторна робота 3
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Виконав Писарєв Владислав КН-32</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Лабораторна робота 3
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>Читання Json</ion-text>
+      <ion-button expand="block" (click)="load()">Завантажити</ion-button>
+      <ion-item>
+        <ion-list>
+          <ion-item button *ngFor="let item of data_users; index as i" detail (click)="toggleDetails(i)">
+            <ion-label *ngIf="!showDetails[i]" text-wrap>
+              <p><span>Назва:</span> {{ item.name }}</p>
+            </ion-label>
+            <ion-text *ngIf="showDetails[i]">
+              <ion-text>
+                <h2 [ngStyle]="{color: getColor(item.perennial)}">Багатолітнє </h2>
+              </ion-text>
+              <ion-text>
+                <h2 >Висота {{item.max_height}} </h2>
+              </ion-text>
+              <h2>Правила</h2>
+              <ion-text *ngFor="let item1 of item.rules; index as j">
+                {{item1}}
+              </ion-text>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

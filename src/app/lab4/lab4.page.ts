@@ -9,9 +9,6 @@ import { Qube_p } from './Class/qube_polynom';
   styleUrls: ['./lab4.page.scss'],
 })
 export class LAB4Page implements OnInit {
-
-  
-
   polynom: Polynomial[] = [];
   max: number =0; 
   max_p:number =0;
@@ -24,7 +21,6 @@ export class LAB4Page implements OnInit {
     this.polynom = new Array();
     let n = parseInt(nn);
     for (let i = 0; i < n; i++){
-    
       this.polynom.push(new Square_p("Квадратний багаточлен", 1,2,3,this.getRandomint(10)))
       this.polynom.push(new Qube_p("Кубічний багаточлен",1,2,3,4, this.getRandomint(10)))
     }

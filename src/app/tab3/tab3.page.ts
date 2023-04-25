@@ -31,7 +31,7 @@ export class Tab3Page {
         this.a[i] = Array(this.n);
         for (j = 0; j < this.n; j++) {
           let aa: number = this.getRandomInt(10);
-          this.a[i][j] = aa
+          this.a[i][j] = aa;
         }
       }
        let ii: number = 0, jj: number = 0, k: number = 0;
